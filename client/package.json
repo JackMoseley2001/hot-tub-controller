@@ -1,0 +1,23 @@
+{
+  "name": "hottub-controller",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w -s",
+    "start": "sirv public -s"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.0",
+    "rollup": "^2.26.11",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.3.1",
+    "svelte": "^3.25.0"
+  },
+  "dependencies": {
+    "sirv-cli": "^1.0.6",
+    "svelte-chartjs": "^1.0.1",
+    "svelte-router-spa": "^5.7.3"
+  }
+}

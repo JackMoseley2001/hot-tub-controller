@@ -1,0 +1,45 @@
+{
+  "name": "hottub",
+  "author": "Jack Moseley",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "start:watch": "DEV=true ts-node-dev src/server/index.ts",
+    "build": "tsc; cd ./client; npm run build; cp -r ./public ../dist/; cp -r ./public ../src/"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "@types/cron": "^1.7.2",
+    "cron": "^1.8.2",
+    "ds18b20-raspi": "^0.3.4",
+    "express": "*",
+    "node-fetch": "^2.6.0",
+    "onoff": "^6.0.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "*",
+    "@types/node": "*",
+    "@types/node-fetch": "^2.5.7",
+    "@types/uuid": "^8.0.1",
+    "ts-node": "*",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^*"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  }
+}
